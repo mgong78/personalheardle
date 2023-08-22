@@ -1,0 +1,29 @@
+<html>
+    <title>heardle...made for you &lt3 </title>
+    <h1>i heard-le that u listen to a lot of music</h1>
+
+    <h4>Guesses Left: {{guesses}}</h4>
+
+    <audio controls>
+        <source src={{audio}} type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
+
+
+    <form action="/check" method=post>
+        <input name='guess' type="text" list="songs"/>
+            <datalist id="songs">
+                {% for song in songs %}
+                    <option value="{{song}}" SELECTED>{{song}}</option>"
+                {% endfor %}
+            </datalist>
+        <input type="submit" value="GUESS">
+    </form>
+
+    <!-- <select name="Song by Artist" method="GET" action="/">
+        {% for song in songs %}
+            <option value="{{song}}" SELECTED>{{song}}</option>"
+        {% endfor %}
+    </select> -->
+
+</html>

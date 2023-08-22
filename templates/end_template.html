@@ -1,0 +1,23 @@
+<html>
+    <img src="{{img_url}}" />
+
+    {% if win %}
+    <h2> YAYYY YOU GOT IT </h2>
+    {% else %}
+    <h2> sorry, you didn't get it </h2>
+    {% endif %}
+
+
+    <form action="/">
+        <input type="submit" value="PLAY AGAIN">
+      </form>
+
+    <audio controls>
+        <source src={{audio}} type="audio/mp3">
+      Your browser does not support the audio element.
+      </audio>
+
+    <h4> The correct answer was:</h4>
+    "{{title}}" by {{artist}}
+
+</html>

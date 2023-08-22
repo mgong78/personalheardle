@@ -1,0 +1,26 @@
+<html>
+    <title>heardle...made for you &lt3 </title>
+    <h1>i heard-le that u listen to a lot of music</h1>
+
+    <h2>pick a game mode</h2>
+
+
+    <p>guess a song from your most-listened-to songs:</p>
+    <form action="/new_tracks">
+        <input type="submit" value="TOP TRACKS">
+    </form>
+
+    <p>guess a song by one of your most-listened-to artists:</p>
+    <form action="/new_artists" method=post>
+        <input name='artist' type="text" list="artists"/>
+            <datalist id="artists">
+                {% for artist in artists %}
+                    <option value="{{artist}}" SELECTED>{{artist}}</option>"
+                {% endfor %}
+            </datalist>
+        <input type="submit" value="GO">
+    </form>
+
+    
+
+</html>
